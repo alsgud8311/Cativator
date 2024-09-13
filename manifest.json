@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "CatHeader",
+  "description": "Set Cat in every website's header",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon/catOnRoof.png",
+    "32": "icon/catOnRoof.png",
+    "48": "icon/catOnRoof.png",
+    "132": "icon/catOnRoof.png"
+  },
+  "action": {
+    "default_icon": "icon/catOnRoof.png",
+    "default_title": "CatHeader",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/inject.js"]
+    }
+  ]
+}
